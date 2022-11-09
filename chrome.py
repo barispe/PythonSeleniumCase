@@ -14,7 +14,6 @@ todo: add Page Object Model
 todo: refactor 
 """
 
-
 import logging
 from selenium.webdriver.common.keys import Keys
 import string
@@ -25,7 +24,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
 
-service_obj = Service("/Users/baris/Desktop/Drivers/chromedriver")
+
+service_obj = Service("/C:/Users/baris/AquaProjects/pythonselenium/drivers/chromedriver")
 driver = webdriver.Chrome(service=service_obj)
 driver.implicitly_wait(5)
 driver.maximize_window()
@@ -53,7 +53,12 @@ for label in title_elements:
 with open('chromeData.csv','w',encoding='UTF8') as writer:
     for line in range(1,len(title_elements)):
         writer.write(title_texts[line]+'\n')
-       
+
+    writer.close()
+     
+    
+
+
 
             
 
