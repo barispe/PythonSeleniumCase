@@ -2,7 +2,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
-
+from selenium import webdriver
+from selenium.webdriver.firefox.service import Service
 
 class BasePage(object):
     def __init__(self, driver, base_url='https://www.google.com/'):
@@ -38,4 +39,6 @@ class BasePage(object):
             print("\n * element not found %s" %(locator[1]))
             self.driver.quit()
 
-   
+    
+            
+
