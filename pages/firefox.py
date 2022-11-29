@@ -38,10 +38,6 @@ driver.delete_all_cookies()
 driver.get("https://www.google.com/")
 driver.find_element(By.CSS_SELECTOR,"input[title='Ara']").send_keys("Araba",Keys.ENTER)
 
-#headlines = driver.find_element(By.CSS_SELECTOR,"h3").get_attribute("normalize-space")
-#headlines = driver.find_elements_by_link_text()
-#driver.implicitly_wait(100)
-#print(headlines)
 
 title_elements = driver.find_elements(By.TAG_NAME,"h3")
 title_texts = []
@@ -49,8 +45,7 @@ for label in title_elements:
     print(label.text)
     title_texts.append(label.text)
         
-#with open('chromeData.csv','w',encoding='UTF8') as writer:
-    #writer.writelines(title_texts)
+
          
 with open('chromeData.csv','w',encoding='UTF8') as writer:
     for line in range(1,len(title_elements)):
